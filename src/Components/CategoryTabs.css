@@ -1,0 +1,29 @@
+.category__image{
+    max-height: 100px;
+    /* min-height: 100%; */
+    /* min-height: 100px; */
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.categorytabs{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content:flex-end;
+    margin: 2px 2px 2px 2px;
+    /* margin-bottom: 35px; */
+    /* border: 1px solid black; */
+    
+    /* min-height: 50px; */
+    /* padding-top: 20px; */
+    /* padding: 20px; */
+    /* width: 100%; */
+    /* max-height: 900px; */
+    /* min-width: 100px; */
+}
+
+.category__info{
+    font-size: small;
+}

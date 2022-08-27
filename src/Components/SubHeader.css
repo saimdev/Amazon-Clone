@@ -1,0 +1,36 @@
+.subheader{
+    padding-left: 10px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    background-color: #232f3e;
+    top: 0;
+    z-index: 100;
+    /* background-color: #0F1111; */
+}
+
+.subheader__option{
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+}
+
+.subheader__optionLineOn{
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.subheader__nav{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.subheader__menuIcon{
+    color: white;
+    margin: 0;
+    padding:0;
+    margin-right: -8px;
+    margin-left: 5px;
+}

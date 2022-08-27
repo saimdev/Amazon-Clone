@@ -1,0 +1,15 @@
+.subtotal > p{
+    font-weight: 400;
+    font-size: 1.20rem;
+}
+
+.subtotal__gift{
+    display: flex;
+    flex-direction: row;
+    /* margin-top: 3px; */
+    padding: 2px;
+}
+
+.subtotal__gift > small{
+    margin-left: 5px;
+}
