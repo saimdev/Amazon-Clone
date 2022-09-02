@@ -4,7 +4,7 @@
     /* min-height: 100px; */
     width: 100%;
     object-fit: contain;
-    margin-bottom: 15px;
+    /* margin-bottom: 15px; */
 }
 
 .categorytabs{
@@ -26,4 +26,14 @@
 
 .category__info{
     font-size: small;
+}
+
+.categorytabs > a{
+    text-decoration: none;
+    color: black;
+}
+
+.categorytabs > a:hover{
+    text-decoration: none;
+    color: black;
 }

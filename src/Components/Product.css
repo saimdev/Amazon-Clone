@@ -1,0 +1,43 @@
+.product{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    max-height: 600px;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.product__tab{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    z-index: 1;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 10px;
+    padding: 20px;
+    width: 100%;
+    max-height: 375px;
+    min-width: 200px;
+    max-width: 300px;
+}
+
+.product__tab > button{
+    margin: 15px 0 10px 0;
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+    background: #f0c14b;
+    font-size: small;
+}
+
+.product__tab > button:hover{
+    cursor: pointer;
+}

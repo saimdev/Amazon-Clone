@@ -4,6 +4,7 @@ import Home from './Home'
 import SubHeader from './SubHeader'
 import Checkout from './Checkout'
 import Footer from './Footer'
+import SearchResult from './SearchResult'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import './App.css'
 
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route element={<Checkout />} path="/checkout" />
           <Route element={<Home />} path="/" />
+          <Route element={<SearchResult/>} path="/product" />
         </Routes>
         <Footer/>
       </BrowserRouter>

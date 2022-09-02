@@ -24,7 +24,7 @@
 .category__header{
     display: flex;
     align-items: flex-start;
-    margin-bottom: 13px;
+    /* margin-bottom: 13px; */
     justify-content: flex-start;
     width: 100%;
     position: sticky;
@@ -59,7 +59,7 @@ a:hover{
     width: 100%;
     max-width: 100%;
     max-height: 289px;
-    margin-top: -340px;
+    margin-top: -330px;
     object-fit:cover;
     /* border: 1px solid green; */
 }

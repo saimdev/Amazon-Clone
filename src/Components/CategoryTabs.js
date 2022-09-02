@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from "react-router-dom"
 import './CategoryTabs.css'
 
 function CategoryTabs(props){
@@ -60,9 +61,11 @@ function CategoryTabs(props){
 
     return (
         <div className='categorytabs'>
+           <Link to={"/"+ props.name}>
             <img className="category__image" src={imageURL}
             alt="" />
             <p className="category__info">{props.name}</p>
+            </Link>
         </div>
 
     );
