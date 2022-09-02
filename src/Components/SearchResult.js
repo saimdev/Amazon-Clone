@@ -1,35 +1,32 @@
-import React, { Component } from 'react';
+import React, { useState, useEffect} from 'react';
 import ProductSearchCard from './ProductSearchCard';
 import Commerce from '@chec/commerce.js';
 
 const commerce = new Commerce('pk_test_464559e85f630bd82c298f86ed926b5c1000e2e799040');
 
-class ProductList extends Component {
-  constructor(props) {
-    super(props);
+function SearchResult(){
+  const [products, setProducts] = useState([])
 
-    this.state = {
-      products: [],
-    }
+  const fetchProducts = async () =>{
+    const {data} = await commerce.products.list()
+      setProducts(data)
   }
 
-  componentDidMount() {
-    commerce.products.list().then((result) => {
-      this.setState({ products: result.data });
-    });
-  }
+  useEffect(()=>{
+    fetchProducts();
+  },[])
 
-  render() {
+  console.log(products)
     return (
       <div className="container main-content">
         {
-          this.state.products.map(product => {
-            return <ProductSearchCard key={product.id} image={product.media.source} name={product.name} description={product.description} price={product.price.formatted_with_symbol} />
+          products.map(product => {
+         return <ProductSearchCard key={product.id} image={product.image.url} name={product.name} description={product.description} price={product.price.formatted_with_symbol} />
           })
         }
       </div>
     );
-  }
+ 
 }
 
-export default ProductList;
+export default SearchResult;

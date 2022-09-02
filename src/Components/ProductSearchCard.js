@@ -2,8 +2,8 @@ import React from "react";
 import "./ProductSearchCard.css";
 
 
-const ProductSearchCard = ({ image, name, description, price }) => {
-  return (
+const ProductSearchCard = ({image, name, price, description}) => {
+  return(
     <div className="row product">
       <div className="col-md-2">
         <img src={image} alt={name} height="150" />
