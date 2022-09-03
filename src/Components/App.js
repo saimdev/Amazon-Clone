@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './Header'
 import Home from './Home'
+import SearchHeader from './SearchHeader'
 import SubHeader from './SubHeader'
 import Checkout from './Checkout'
 import Footer from './Footer'
@@ -17,7 +18,7 @@ function App() {
         <Routes>
           <Route element={<Checkout />} path="/checkout" />
           <Route element={<Home />} path="/" />
-          <Route element={<SearchResult/>} path="/product" />
+          <Route element={[<SearchHeader/>, <SearchResult/>]} path="/product" />
         </Routes>
         <Footer/>
       </BrowserRouter>

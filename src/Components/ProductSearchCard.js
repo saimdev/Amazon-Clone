@@ -1,22 +1,23 @@
 import React from "react";
 import "./ProductSearchCard.css";
+import { Link } from "react-router-dom"
 
+const ProductSearchCard = ({ image, name, price, description }) => {
+  return (
+    <div className="productsearchcard">
 
-const ProductSearchCard = ({image, name, price, description}) => {
-  return(
-    <div className="row product">
-      <div className="col-md-2">
-        <img src={image} alt={name} height="150" />
-      </div>
-      <div className="col-md-8 product-detail">
-        <h4>{name}</h4>
-        <div dangerouslySetInnerHTML={{__html: description}}></div>
-      </div>
-      <div className="col-md-2 product-price">
-        {price}
+        <div className="productsearchcard__image">
+          <img src={image} alt={name} height="150" />
+        </div>
+        <div className="productsearchcard__details">
+        <div className="productsearchcard__description">
+         <Link to={"/"+name}> <h4>{name}</h4></Link>
+          <div dangerouslySetInnerHTML={{ __html: description }}></div>
+        </div>
+        <div className="productsearchcard__price">{price}</div>
       </div>
     </div>
   );
-}
+};
 
 export default ProductSearchCard;
