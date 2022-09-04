@@ -37,13 +37,13 @@
     /* border: 1px solid red; */
 }
 
-a {
+.category__footer> a {
     text-decoration: none;
     color: #007185;
     font-size: small;
 }
 
-a:hover{
+.category__footer> a:hover{
     color: red;
     text-decoration-line: underline;
 }

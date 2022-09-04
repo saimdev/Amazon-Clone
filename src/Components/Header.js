@@ -5,8 +5,11 @@ import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import AddShoppingCartIcon from "@mui/icons-material/AddShoppingCart";
 import flag from "../images/flag.png";
 import { Link } from "react-router-dom";
+import { useStateValue } from "./StateProvider";
 
 function Header() {
+  const [{ basket }, dispatch] = useStateValue();
+
   return (
     <div className="header">
       <Link to="/">
@@ -37,8 +40,8 @@ function Header() {
           </span>
         </div>
         <div className="header__option">
-          <span className="header__optionLineOn">Hello, Sign In</span>
-          <span className="header__optionLineTwo">Account & Lists</span>
+          <Link to="/login" className="header__option__link1"><span className="header__optionLineOn">Hello, Sign In</span></Link>
+          <Link to="/login" className="header__option__link2"><span className="header__optionLineTwo">Account & Lists</span></Link>
         </div>
         <div className="header__option">
           <span className="header__optionLineOn">Returns</span>
@@ -48,9 +51,8 @@ function Header() {
         <div className="header__optionBasket">
           <Link to="/checkout">
             <AddShoppingCartIcon className="header__cartIcon" />
-            </Link>
-            <span className="header__optionLineTwo count">0</span>
-        
+          </Link>
+          <span className="header__optionLineTwo count">{basket.length}</span>
         </div>
       </div>
     </div>

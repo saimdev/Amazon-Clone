@@ -1,0 +1,30 @@
+.loginpage{
+    background: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login__logo__link{
+    display: flex;
+    flex-direction: row !important;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.login__logo{
+    height: 4vh;
+}
+
+
+
+.login__container{
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
