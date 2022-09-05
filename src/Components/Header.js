@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect} from "react";
 import "./Header.css";
 import SearchIcon from "@mui/icons-material/Search";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
@@ -8,7 +8,12 @@ import { Link } from "react-router-dom";
 import { useStateValue } from "./StateProvider";
 
 function Header() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket, user }, dispatch] = useStateValue();
+  const [status, setStatus] = useState("Sign In");
+
+  useEffect(()=>{
+    user? setStatus("Sign Out"): setStatus("Sign In")
+  },[])
 
   return (
     <div className="header">
@@ -40,7 +45,7 @@ function Header() {
           </span>
         </div>
         <div className="header__option">
-          <Link to="/login" className="header__option__link1"><span className="header__optionLineOn">Hello, Sign In</span></Link>
+          <Link to="/login" className="header__option__link1"><span className="header__optionLineOn">Hello, {status}</span></Link>
           <Link to="/login" className="header__option__link2"><span className="header__optionLineTwo">Account & Lists</span></Link>
         </div>
         <div className="header__option">
